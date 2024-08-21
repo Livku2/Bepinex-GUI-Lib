@@ -38,11 +38,11 @@ namespace GorillaTagUILib.Gui
             GUI.DrawTexture(new Rect(rect.x -3, rect.y -3, rect.width, rect.height), texture, ScaleMode.StretchToFill, true, 0f, color, 0f, 20f);
             GUI.Label(rect, text);
         }
-        public static void doWindow(ref Rect rect, GUI.WindowFunction windowFunction, Texture texture, Color colour, float rounded)
+        public static void doWindow(ref Rect rect, GUI.WindowFunction windowFunction, Texture texture, Color colour, float rounded, int windowNum)
         {
             GUI.DrawTexture(rect, texture, ScaleMode.StretchToFill, true, 0f, colour, 0f, rounded);
             GUI.backgroundColor = Color.clear;
-            rect = GUI.Window(1, rect, windowFunction, "");
+            rect = GUI.Window(windowNum, rect, windowFunction, "");
         }
         public static bool Toggle(ref bool toggled, Rect rect, string text, Texture texture, float rounded, Color colour1, Color colour2)
         {
