@@ -99,10 +99,27 @@ namespace GorillaTagUILib.Gui
             GUI.backgroundColor = Color.clear;
             if (GUI.Button(new Rect(pos.x, pos.y, 20f, 20f), "", guistyle))
             {
-                if (boolean)
+                if (!boolean)
                 {
                     onDisable();
                 }
+                boolean = !boolean;
+            }
+            GUI.DrawTexture(new Rect(pos.x, pos.y, 20f, 20f), texture, ScaleMode.StretchToFill, true, 0f, Color.black, 0f, 4f);
+            GUI.Label(new Rect(pos.x + 30f, pos.y, 90f, 90f), text);
+            if (boolean)
+            {
+                GUI.DrawTexture(new Rect(pos.x, pos.y, 20f, 20f), texture, ScaleMode.StretchToFill, true, 0f, Color.white, 0f, 4f);
+            }
+            return boolean;
+        }
+        public static bool CheckBoxToggle(ref bool boolean, Vector2 pos, string text, Texture2D texture)
+        {
+            GUIStyle guistyle = new GUIStyle(GUI.skin.button);
+            guistyle.hover.textColor = new Color(guistyle.normal.textColor.r + 0.3f, guistyle.normal.textColor.g + 0.3f, guistyle.normal.textColor.b + 0.3f);
+            GUI.backgroundColor = Color.clear;
+            if (GUI.Button(new Rect(pos.x, pos.y, 20f, 20f), "", guistyle))
+            {
                 boolean = !boolean;
             }
             GUI.DrawTexture(new Rect(pos.x, pos.y, 20f, 20f), texture, ScaleMode.StretchToFill, true, 0f, Color.black, 0f, 4f);
