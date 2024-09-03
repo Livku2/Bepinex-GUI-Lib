@@ -8,7 +8,7 @@ using ScaleMode = UnityEngine.ScaleMode;
 using Vector2 = UnityEngine.Vector2;
 using GUIStyle = UnityEngine.GUIStyle;
 
-namespace GorillaTagUILib.Gui
+namespace UnityUILib.Gui
 {
     public class GUILib
     {
