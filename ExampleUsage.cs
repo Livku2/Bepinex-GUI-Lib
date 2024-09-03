@@ -6,9 +6,9 @@ using Rect = UnityEngine.Rect;
 using Texture = UnityEngine.Texture;
 using Vector2 = UnityEngine.Vector2;
 using GUIStyle = UnityEngine.GUIStyle;
-using MonoBehavior = UnityEngine.MonoBehavior;
+using MonoBehaviour = UnityEngine.MonoBehaviour;
 
-public class Plugin : MonoBehavior
+public class Plugin : MonoBehaviour
 {
   public Texture2D tex = GUILib.MakeTex(1,1,Color.White);
 
